@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/displayhist"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/round_circle_red"
+            android:gravity="center"
+            android:onClick="display"
+            android:text="Show History"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp"
+            android:gravity="center"
+            android:text="History"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

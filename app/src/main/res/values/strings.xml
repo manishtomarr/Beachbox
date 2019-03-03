@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <string name="login">Login</string>
+    <string name="send">Send Email</string>
+    <string name="seperator">-----------</string>
+    <string name="q">Any other questions?</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="faqandemail">FAQ and Contact Support</string>
+    <string name="question1">Where is BeachBox Smart Boxing Studio and when is it open?</string>
+    <string name="answer1a">1317 Memorial Dr, Asbury Park, NJ 07712</string>
+    <string name="answer1b">Monday	    5AM–8:30PM</string>
+    <string name="answer1c">Tuesday	    5AM–8:30PM</string>
+    <string name="answer1d">Wednesday	5AM–8:30PM</string>
+    <string name="answer1e">Thursday	5AM–8:30PM</string>
+    <string name="answer1f">Friday	    5AM–8:30PM</string>
+    <string name="answer1g">Saturday	7:30–11AM</string>
+    <string name="answer1h">Sunday	    7:30–11AM</string>
+    <string name="question2">Can I use this app outside of the studio?</string>
+    <string name="answer2">Of course. if you have a place to attach your phone to a punching bag, just stick it or put it in to a pouch on the bag, it will calculate your score the same as you would in the studio</string>
+    <string name="question3">Who made this amazing app?</string>
+    <string name="answer3">A group of seniors from NJIT</string>
+    <string name="question4">Who founded BeachBox Smart Boxing Studio?</string>
+    <string name="answer4">Wayne Strobel founded BeachBox Smart Boxing Studio early January 2018 to create not a gym, but a lifestyle.</string>
+    <string name="question5">What should I do after I workout in the studio?</string>
+    <string name="answer5">After an exhausting hour or so of working out in the studio, it is a great idea to enjoy the amazing and relaxing Cryolete next door, which Wayne Strobel founded for those who need a place to relax and rejuvenate.</string>
+
+</resources>
