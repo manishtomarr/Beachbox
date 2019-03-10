@@ -5,18 +5,24 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
+import com.example.Adapter.ClassScheduleRVAdapter;
 import com.example.Model.Clazz;
 import com.example.Services.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClassSchedule extends AppCompatActivity {
 
     Service service = new Service();
+    RecyclerView classesRV;
+    ClassScheduleRVAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +30,11 @@ public class ClassSchedule extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        classesRV = findViewById(R.id.rv_class_schedule);
+        classesRV.setHasFixedSize(true);
+        classesRV.setLayoutManager(new LinearLayoutManager(ClassSchedule.this));
+        adapter = new ClassScheduleRVAdapter(null);
+        classesRV.setAdapter(adapter);
 
         RetrieveClassesTask retrieveClassesTask  = new RetrieveClassesTask();
         retrieveClassesTask.execute();
@@ -40,7 +51,7 @@ public class ClassSchedule extends AppCompatActivity {
     }
 
 
-    class RetrieveClassesTask extends AsyncTask<String, Void, List<Clazz>> {
+    class RetrieveClassesTask extends AsyncTask<String, Void, ArrayList<Clazz>> {
 
         public RetrieveClassesTask() {
         }
@@ -48,7 +59,7 @@ public class ClassSchedule extends AppCompatActivity {
         protected void onPreExecute() {
         }
 
-        protected List<Clazz> doInBackground(String... params) {
+        protected ArrayList<Clazz> doInBackground(String... params) {
             try {
                 return service.getClasses();
             }
@@ -58,10 +69,12 @@ public class ClassSchedule extends AppCompatActivity {
             }
         }
 
-        protected void onPostExecute(List<Clazz> listOfClasses) {
+        protected void onPostExecute(ArrayList<Clazz> listOfClasses) {
             if(listOfClasses.size() == 0) {
                 Log.d("Class Schedule", "No Class List");
             } else {
+                adapter.setClasses(listOfClasses);
+                adapter.notifyDataSetChanged();
 
             }
         }

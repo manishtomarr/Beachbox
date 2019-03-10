@@ -77,8 +77,8 @@ public class Service {
 
 
 
-    public List<Clazz> getClasses() {
-        List<Clazz> listOfClasses = new ArrayList<>();
+    public ArrayList<Clazz> getClasses() {
+        ArrayList<Clazz> listOfClasses = new ArrayList<>();
         try {
             String wsUrl = Constants.WEB_SERVICE_URL.concat(Constants.CLASS_API_NAME);
             Document doc = soapRequest(wsUrl, XMLRequests.getXmlReqForGetClasses(), Constants.GET_CLASSES_SOAP_ACTION);
