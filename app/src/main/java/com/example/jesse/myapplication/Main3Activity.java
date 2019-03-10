@@ -1,12 +1,15 @@
 package com.example.jesse.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.Model.User;
 
 public class Main3Activity extends AppCompatActivity {
 
@@ -23,6 +26,22 @@ public class Main3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
         EditText user = (EditText) findViewById(R.id.editText);
         EditText pass = (EditText) findViewById(R.id.editText2);
+
+
+        SharedPreferences userDetails = getSharedPreferences("UserCredentials", MODE_PRIVATE);
+        SharedPreferences.Editor edit = userDetails.edit();
+        edit.clear();
+        edit.putString("username", "Siteowner");
+        edit.putString("password", "apitest1234");
+        edit.commit();
+
+        User.username = "Siteowner";
+        User.password = "apitest1234";
+
+        Intent intent = new Intent(this, ClassSchedule.class);
+        startActivity(intent);
+
+
 
     }
 

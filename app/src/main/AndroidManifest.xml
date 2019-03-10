@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -56,6 +57,10 @@
         </activity>
         <activity
             android:name=".EmailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ClassSchedule"
+            android:label="@string/title_activity_class_schedule"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
