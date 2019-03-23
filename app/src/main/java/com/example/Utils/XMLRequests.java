@@ -1,5 +1,6 @@
 package com.example.Utils;
 
+import com.example.Model.Client;
 import com.example.Model.User;
 
 /**
@@ -8,6 +9,7 @@ import com.example.Model.User;
 
 public class XMLRequests {
 
+    /***** get class schedule xml request ****/
     public static String getXmlReqForGetClasses() {
         String xmlInput = " <soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns=\"http://clients.mindbodyonline.com/api/0_5_1\">\r\n" +
                 "                <soapenv:Header/>\r\n" +
@@ -40,4 +42,47 @@ public class XMLRequests {
                 "             </soapenv:Envelope>";
         return xmlInput;
     }
+
+
+    /*********** Register Client with ID XML Request ***************/
+    public static String getXmlReqForAddClientWithID(Client client) {
+        String xmlInput = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns=\"http://clients.mindbodyonline.com/api/0_5_1\">\n" +
+                "    <soapenv:Header/>\n" +
+                "    <soapenv:Body>\n" +
+                "        <AddOrUpdateClients>\n" +
+                "            <Request>\n" +
+                "                <SourceCredentials>\n" +
+                "                    <SourceName>"+Constants.SOURCE_NAME+"</SourceName>\n" +
+                "                    <Password>"+Constants.SOURCE_PASSWORD+"</Password>\n" +
+                "                    <SiteIDs>\n" +
+                "                        <int>"+Constants.SITE_ID+"</int>\n" +
+                "                    </SiteIDs>\n" +
+                "                </SourceCredentials>\n" +
+                "                <XMLDetail>Full</XMLDetail>\n" +
+                "                <PageSize>10</PageSize>\n" +
+                "                <CurrentPageIndex>0</CurrentPageIndex>\n" +
+                "                <Clients>\n" +
+                "                    <Client>\n" +
+                "                        <ID>"+client.getId()+"</ID>\n" +
+                "                        <FirstName>"+client.getFname()+"</FirstName>\n" +
+                "                        <LastName>"+client.getFname()+"</LastName>\n" +
+                "                        <BirthDate>"+client.getBdate()+"</BirthDate>\n" +
+                "                        <MobilePhone>"+client.getMobile()+"</MobilePhone>\n" +
+                "                        <Username>"+client.getUsername()+"</Username>\n"+
+                "                        <Password>"+client.getPwd()+"</Password>\n"+
+        		"                        <Email>"+client.getEmail()+"</Email>\n"+
+                "                        <AddressLine1>"+client.getAddress()+"</AddressLine1>\n"+
+        		"                        <City>"+client.getCity()+"</City>\n"+
+            	"                        <State>"+client.getState()+"</State>\n"+
+            	"                        <PostalCode>"+client.getPostalCode()+"</PostalCode>\n"+
+                "                    </Client>\n" +
+                "                </Clients>\n" +
+                "            </Request>\n" +
+                "        </AddOrUpdateClients>\n" +
+                "    </soapenv:Body>\n" +
+                "</soapenv:Envelope>";
+        return xmlInput;
+    }
+
+
 }

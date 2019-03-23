@@ -37,10 +37,10 @@ public class Main3Activity extends AppCompatActivity {
 
         User.username = "Siteowner";
         User.password = "apitest1234";
-
+/*
         Intent intent = new Intent(this, ClassSchedule.class);
         startActivity(intent);
-
+*/
 
 
     }
@@ -68,6 +68,10 @@ public class Main3Activity extends AppCompatActivity {
         if(e1.equals("") || e2.equals("")) {
             Toast.makeText(getApplicationContext(), "Fields are Empty", Toast.LENGTH_SHORT).show();
             openPunch();
+        } else {
+            //validate user with id password
+            Intent intent = new Intent(this, AddClient.class);
+            startActivity(intent);
         }
         //using Database.java I connected the user by checking it to EditText
         /*

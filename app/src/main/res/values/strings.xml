@@ -27,5 +27,6 @@
     <string name="question5">What should I do after I workout in the studio?</string>
     <string name="answer5">After an exhausting hour or so of working out in the studio, it is a great idea to enjoy the amazing and relaxing Cryolete next door, which Wayne Strobel founded for those who need a place to relax and rejuvenate.</string>
     <string name="title_activity_class_schedule">ClassSchedule</string>
+    <string name="title_activity_add_client">AddClient</string>
 
 </resources>

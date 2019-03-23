@@ -61,6 +61,10 @@
         <activity
             android:name=".ClassSchedule"
             android:label="@string/title_activity_class_schedule"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddClient"
+            android:label="@string/title_activity_add_client"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

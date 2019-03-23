@@ -3,6 +3,7 @@ package com.example.Services;
 import android.util.Log;
 
 import com.example.Model.Clazz;
+import com.example.Model.Client;
 import com.example.Model.Location;
 import com.example.Model.User;
 import com.example.Utils.Constants;
@@ -120,5 +121,28 @@ public class Service {
             Log.e("Get Classes", e.getMessage() + e.getStackTrace());
         }
         return listOfClasses;
+    }
+
+    //add or update client in db and return message from response
+    public String addOrUpdateClient(Client c) {
+        String msg = "";
+        try {
+            String wsUrl = Constants.WEB_SERVICE_URL.concat(Constants.CLIENT_API_NAME);
+            Document doc = soapRequest(wsUrl, XMLRequests.getXmlReqForAddClientWithID(c), Constants.ADD_OR_UPDATE_CLIENT_SOAP_ACTION);
+
+            NodeList nList = doc.getElementsByTagName("AddOrUpdateClientsResult");
+            if(nList.getLength() > 0) {
+                Element e = (Element) nList.item(0);
+                msg = e.getElementsByTagName("Status").item(0).getTextContent();
+
+                //TODO create preference here of client
+            } else {
+                msg = "Could not proceed, please try again";
+            }
+        } catch(Exception e) {
+            Log.e("Get Classes", e.getMessage() + e.getStackTrace());
+            msg = "Some exception occurred, please try again";
+        }
+        return msg;
     }
 }
