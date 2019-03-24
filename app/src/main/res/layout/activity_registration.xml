@@ -54,7 +54,7 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/fullname"
                 android:layout_width="266dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -87,7 +87,7 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:id="@+id/editText9"
+                android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -107,7 +107,7 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:id="@+id/editText7"
+                android:id="@+id/password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -141,7 +141,7 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -154,7 +154,7 @@
                 android:textSize="16dp" />
 
             <EditText
-                android:id="@+id/editText8"
+                android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -207,7 +207,7 @@
                 android:layout_weight="1" />
 
             <EditText
-                android:id="@+id/editText6"
+                android:id="@+id/birthday"
                 android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -221,7 +221,7 @@
                 android:textSize="16dp" />
 
             <EditText
-                android:id="@+id/editText10"
+                android:id="@+id/gender"
                 android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -235,7 +235,7 @@
                 android:textSize="16dp" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/weight"
                 android:layout_width="123dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
