@@ -10,14 +10,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -167,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void GoLogin(View view) {
-        startActivity(new Intent(this, Main3Activity.class));
+        startActivity(new Intent(this, LoginActivity.class));
     }
     public void GoHistory(View view) {
         startActivity(new Intent(this, histActivity.class));

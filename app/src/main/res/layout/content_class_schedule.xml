@@ -9,8 +9,9 @@
     android:padding="10dp">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_class_schedule"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rv_class_schedule"
-        android:paddingTop="50dp"/>
+        android:background="@drawable/background"
+        android:paddingTop="50dp" />
 </LinearLayout>

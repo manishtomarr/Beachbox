@@ -15,6 +15,7 @@ public class Constants {
 
     public static final String GET_CLASSES_SOAP_ACTION = "http://clients.mindbodyonline.com/api/0_5_1/GetClasses";
     public static final String ADD_OR_UPDATE_CLIENT_SOAP_ACTION = "http://clients.mindbodyonline.com/api/0_5_1/AddOrUpdateClients";
+    public static final String VALIDATE_CLIENT_LOGIN_SOAP_ACTION = "http://clients.mindbodyonline.com/api/0_5_1/ValidateLogin";
 
 
 

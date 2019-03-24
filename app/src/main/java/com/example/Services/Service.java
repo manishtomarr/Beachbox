@@ -145,4 +145,43 @@ public class Service {
         }
         return msg;
     }
+
+    /**** validate Login and return client or null ****/
+     public Client validateLogin(String username, String pwd) {
+         try {
+             String wsUrl = Constants.WEB_SERVICE_URL.concat(Constants.CLIENT_API_NAME);
+             Document doc = soapRequest(wsUrl, XMLRequests.getXMLReqForValidateLogin(username, pwd), Constants.VALIDATE_CLIENT_LOGIN_SOAP_ACTION);
+             NodeList nList = doc.getElementsByTagName("ValidateLoginResult");
+             if(nList.getLength() > 0) {
+                 Element e = (Element) nList.item(0);
+                 if ((e.getElementsByTagName("Status").item(0).getTextContent()).equals("Success")) {
+                    Client client = new Client();
+                    Element cElement = (Element) doc.getElementsByTagName("Client").item(0);
+                    client.setFname(cElement.getElementsByTagName("FirstName").item(0).getTextContent());
+                    client.setLname(cElement.getElementsByTagName("LastName").item(0).getTextContent());
+                    client.setEmail(cElement.getElementsByTagName("Email").item(0).getTextContent());
+                    client.setAddress(cElement.getElementsByTagName("AddressLine1").item(0).getTextContent());
+                    client.setCity(cElement.getElementsByTagName("City").item(0).getTextContent());
+                    client.setState(cElement.getElementsByTagName("State").item(0).getTextContent());
+                    client.setPostalCode(cElement.getElementsByTagName("PostalCode").item(0).getTextContent());
+                    client.setMobile(cElement.getElementsByTagName("MobilePhone").item(0).getTextContent());
+
+                    if(cElement.getElementsByTagName("PhotoURL").item(0) != null) {
+                        client.setPhotoUrl(cElement.getElementsByTagName("PhotoURL").item(0).getTextContent());
+                    }
+
+                    client.setBdate(cElement.getElementsByTagName("BirthDate").item(0).getTextContent());
+                    client.setId(cElement.getElementsByTagName("ID").item(0).getTextContent());
+                    client.setUsername(username);
+                    client.setPwd(pwd);
+
+                    return client;
+                 }
+             }
+         } catch(Exception e) {
+             Log.e("Get Classes", e.getMessage() + e.getStackTrace());
+         }
+
+         return null;
+    }
 }

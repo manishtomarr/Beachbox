@@ -84,5 +84,27 @@ public class XMLRequests {
         return xmlInput;
     }
 
+    /******************** Validate Login ***********************/
+    public static String getXMLReqForValidateLogin(String username, String password) {
+        String xmlInput = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n" +
+                "               <soapenv:Header/>\n" +
+                "               <soapenv:Body>\n" +
+                "                  <ValidateLogin xmlns=\"http://clients.mindbodyonline.com/api/0_5_1\">\n" +
+                "                     <Request>\n" +
+                "                        <SourceCredentials>\n" +
+                "                          <SourceName>"+Constants.SOURCE_NAME+"</SourceName>\n" +
+                "                          <Password>"+Constants.SOURCE_PASSWORD+"</Password>\n" +
+                "                          <SiteIDs>\n" +
+                "                             <int>"+Constants.SITE_ID+"</int>\n" +
+                "                        </SiteIDs>\n" +
+                "                        </SourceCredentials>\n" +
+                "                        <Username>"+username+"</Username>\n" +
+                "                        <Password>"+password+"</Password>\n" +
+                "                     </Request>\n" +
+                "                  </ValidateLogin>\n" +
+                "               </soapenv:Body>\n" +
+                "</soapenv:Envelope>";
+        return xmlInput;
+    }
 
 }

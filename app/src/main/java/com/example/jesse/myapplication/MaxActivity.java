@@ -13,16 +13,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -211,7 +204,7 @@ public class MaxActivity extends AppCompatActivity implements SensorEventListene
     }
 
     public void GoLogin(View view) {
-        startActivity(new Intent(this, Main3Activity.class));
+        startActivity(new Intent(this, LoginActivity.class));
     }
     public void GoHistory(View view) {
         startActivity(new Intent(this, histActivity.class));

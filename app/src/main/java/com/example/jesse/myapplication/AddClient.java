@@ -1,5 +1,6 @@
 package com.example.jesse.myapplication;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.Model.Clazz;
 import com.example.Model.Client;
@@ -29,17 +31,17 @@ public class AddClient extends AppCompatActivity {
         /****** TODO : get all these hardcoded fields from user and set in client object and call addClient function *****/
 
         Client c = new Client();
-        c.setFname("Joe");
-        c.setLname("Smith");
+        c.setFname("John");
+        c.setLname("Michael");
         c.setBdate("1989-12-12");
         c.setMobile("1111111111");
-        c.setUsername("js");
+        c.setUsername("jm");
         c.setPwd("abc123!");
-        c.setEmail("js@fake.com");
+        c.setEmail("jm@fake.com");
         c.setAddress("Martin Luther king");
-        c.setCity("New York");
-        c.setState("NY");
-        c.setPostalCode("10001");
+        c.setCity("Newark");
+        c.setState("NJ");
+        c.setPostalCode("07102");
 
         addClient(c);
 
@@ -73,7 +75,9 @@ public class AddClient extends AppCompatActivity {
 
         protected void onPostExecute(String msg) {
             //TODO :show msg on screen and redirect to home
-
+            Toast.makeText(getApplicationContext(), "User Created! Please Login with your username and password", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(AddClient.this, LoginActivity.class);
+            startActivity(intent);
         }
     }
 
