@@ -6,285 +6,196 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context="com.example.jesse.myapplication.AddClient">
+    tools:context="com.example.jesse.myapplication.RegisterClientActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="163dp"
+            android:layout_height="159dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/round_circle_red"
+            app:srcCompat="@mipmap/beachboxlogo" />
+
+        <EditText
+            android:id="@+id/fname"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="First Name"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
 
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_weight="1" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="163dp"
-                android:layout_height="159dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="35dp"
-                android:background="@drawable/round_circle_red"
-                app:srcCompat="@mipmap/beachboxlogo" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="213dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/fullname"
-                android:layout_width="266dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:backgroundTint="#7FFFD4"
-                android:ems="10"
-                android:hint="Full Name"
-
-                android:inputType="textPersonName"
-                android:textColorHint="#FFFFFF"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="213dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView35"
-                android:layout_width="81dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:backgroundTint="#7FFFD4"
-                android:ems="10"
-
-                android:hint="Email"
-                android:inputType="textPersonName"
-                android:textColorHint="#FFFFFF"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:backgroundTint="#7FFFD4"
-                android:ems="10"
-
-                android:hint="Password"
-                android:inputType="textPersonName"
-                android:textColorHint="#FFFFFF"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="81dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="199dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView39"
-                android:layout_width="81dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/phone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:backgroundTint="#7FFFD4"
-                android:ems="10"
-                android:hint="Phone Number"
-
-                android:inputType="textPersonName"
-                android:textColorHint="#FFFFFF"
-                android:textSize="16dp" />
-
-            <EditText
-                android:id="@+id/address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:backgroundTint="#7FFFD4"
-                android:ems="10"
-
-                android:hint="Address"
-                android:inputType="textPersonName"
-                android:textColorHint="#FFFFFF"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/textView37"
-                android:layout_width="81dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/textView36"
-                android:layout_width="81dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="251dp"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView38"
-                android:layout_width="81dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <EditText
-                android:id="@+id/birthday"
-                android:layout_width="145dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:backgroundTint="#7FFFD4"
-                android:ems="10"
-
-                android:hint="Birthday"
-                android:inputType="textPersonName"
-                android:textColorHint="#FFFFFF"
-                android:textSize="16dp" />
-
-            <EditText
-                android:id="@+id/gender"
-                android:layout_width="115dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:backgroundTint="#7FFFD4"
-                android:ems="10"
-
-                android:hint="Gender"
-                android:inputType="textPersonName"
-                android:textColorHint="#FFFFFF"
-                android:textSize="16dp" />
-
-            <EditText
-                android:id="@+id/weight"
-                android:layout_width="123dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:backgroundTint="#7FFFD4"
-                android:ems="10"
-
-                android:hint="Weigth (lb)"
-                android:inputType="textPersonName"
-                android:textColorHint="#FFFFFF"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="53dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/lname"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/fname"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="Last Name"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lname"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="Email Address"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="Username"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/bdate"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="Birth Date (YYYY-MM-DD)"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bdate"
+            android:layout_centerHorizontal="true"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView15"
+            <RadioButton
+                android:id="@+id/radio_female"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"
-                android:background="@drawable/round_button"
-                android:onClick="onClick"
-                android:text="@string/register"
+                android:buttonTint="#FFFFFF"
+                android:checked="true"
+                android:text="Male"
                 android:textColor="@color/ic_launcher_background" />
 
-            <TextView
-                android:id="@+id/textView16"
+            <RadioButton
+                android:id="@+id/radio_male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:buttonTint="#FFFFFF"
+                android:text="Female"
+                android:textColor="@color/ic_launcher_background" />
 
-        </LinearLayout>
+        </RadioGroup>
 
-    </LinearLayout>
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radio_group_gender"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="Mobile No"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mobile"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="Address"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/address"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="City"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/state"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/city"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="State"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/postal_code"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/state"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#7FFFD4"
+            android:ems="10"
+            android:hint="Postal Code"
+            android:textColorHint="#FFFFFF"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/postal_code"
+            android:layout_marginTop="26dp"
+            android:background="@android:color/holo_blue_light"
+            android:onClick="onClickRegister"
+            android:text="Sign up"
+            android:textColor="@color/ic_launcher_background"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

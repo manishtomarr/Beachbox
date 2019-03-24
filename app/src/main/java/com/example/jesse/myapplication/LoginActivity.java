@@ -90,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onClickSignUp(View view) {
-        Intent intent = new Intent(this, AddClient.class);
+        Intent intent = new Intent(this, RegisterClientActivity.class);
         startActivity(intent);
     }
     //opens up the start screen

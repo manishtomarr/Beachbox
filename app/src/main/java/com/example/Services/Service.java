@@ -134,14 +134,16 @@ public class Service {
             if(nList.getLength() > 0) {
                 Element e = (Element) nList.item(0);
                 msg = e.getElementsByTagName("Status").item(0).getTextContent();
-
-                //TODO create preference here of client
+                if(!e.getElementsByTagName("Status").item(0).getTextContent().equals("Success")) {
+                    Element cElement = (Element) doc.getElementsByTagName("Messages").item(0);
+                    msg = cElement.getElementsByTagName("string").item(0).getTextContent();
+                }
             } else {
-                msg = "Could not proceed, please try again";
+                msg = "Could not proceed, please try again with valid values";
             }
         } catch(Exception e) {
             Log.e("Get Classes", e.getMessage() + e.getStackTrace());
-            msg = "Some exception occurred, please try again";
+            msg = "Some error occurred, please try again with valid values";
         }
         return msg;
     }
@@ -165,6 +167,7 @@ public class Service {
                     client.setState(cElement.getElementsByTagName("State").item(0).getTextContent());
                     client.setPostalCode(cElement.getElementsByTagName("PostalCode").item(0).getTextContent());
                     client.setMobile(cElement.getElementsByTagName("MobilePhone").item(0).getTextContent());
+                    client.setGender(cElement.getElementsByTagName("Gender").item(0).getTextContent());
 
                     if(cElement.getElementsByTagName("PhotoURL").item(0) != null) {
                         client.setPhotoUrl(cElement.getElementsByTagName("PhotoURL").item(0).getTextContent());

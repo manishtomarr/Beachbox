@@ -18,6 +18,7 @@ public class Client {
     String city;
     String state;
     String postalCode;
+    String gender;
 
     public Client() {
 
@@ -123,5 +124,13 @@ public class Client {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
