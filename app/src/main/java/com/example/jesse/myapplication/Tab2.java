@@ -19,7 +19,7 @@ public class Tab2 extends Fragment {
         //TextView textView = (TextView) rootView.findViewById(R.id.tb1TV);
         //textView.setText(getString(R.string.section_format));
         return rootView;
-        //return inflater.inflate(R.layout.tab1, container, false);
+        //return inflater.inflate(R.layout.tab1, container, false);  temp
     }
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
