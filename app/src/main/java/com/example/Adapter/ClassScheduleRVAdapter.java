@@ -1,6 +1,7 @@
 package com.example.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.Model.Clazz;
+import com.example.jesse.myapplication.ClazzDetail;
 import com.example.jesse.myapplication.R;
 
 import java.util.ArrayList;
@@ -63,14 +65,14 @@ public class ClassScheduleRVAdapter  extends RecyclerView.Adapter<ClassScheduleR
         holder.classEndTime.setText("End Time: " + classes.get(position).getEndDateTime().split("T")[1]);
         holder.classLocationName.setText("Location: " + classes.get(position).getLocation().getName());
 
-/*        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(view.getContext(),FoodDetail.class);
-                i.putExtra("foodItem",foodItems.get(position));
+                Intent i = new Intent(view.getContext(),ClazzDetail.class);
+                i.putExtra("clazz",classes.get(position));
                 view.getContext().startActivity(i);
             }
-        });*/
+        });
     }
 
     @Override

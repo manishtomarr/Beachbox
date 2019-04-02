@@ -1,10 +1,12 @@
 package com.example.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by Junaid on 3/9/2019.
  */
 
-public class Location {
+public class Location implements Serializable {
     String siteID;
     String businessDescription;
     Boolean hasClasses;

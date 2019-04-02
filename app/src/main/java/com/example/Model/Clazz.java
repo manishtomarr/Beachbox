@@ -1,12 +1,11 @@
 package com.example.Model;
 
-import com.example.Utils.Constants;
-
+import java.io.Serializable;
 /**
  * Created by Junaid on 3/9/2019.
  */
 
-public class Clazz {
+public class Clazz implements Serializable {
     String classScheduleID;
     Location location;
     String maxCapacity;

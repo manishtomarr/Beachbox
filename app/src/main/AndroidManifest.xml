@@ -65,7 +65,8 @@
         <activity
             android:name=".RegisterClientActivity"
             android:label="@string/title_activity_add_client"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ClazzDetail"></activity>
     </application>
 
 </manifest>
