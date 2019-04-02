@@ -76,6 +76,7 @@ public class XMLRequests {
             	"                        <State>"+client.getState()+"</State>\n"+
             	"                        <PostalCode>"+client.getPostalCode()+"</PostalCode>\n"+
                 "                        <Gender>"+client.getGender()+"</Gender>\n"+
+                "                        <ReferredBy>string</ReferredBy>\n"+
                 "                    </Client>\n" +
                 "                </Clients>\n" +
                 "            </Request>\n" +
