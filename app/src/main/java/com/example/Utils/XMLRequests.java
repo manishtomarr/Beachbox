@@ -77,6 +77,13 @@ public class XMLRequests {
             	"                        <PostalCode>"+client.getPostalCode()+"</PostalCode>\n"+
                 "                        <Gender>"+client.getGender()+"</Gender>\n"+
                 "                        <ReferredBy>string</ReferredBy>\n"+
+                "                        <HomePhone>1111111111</HomePhone>\n"+
+                "                        <WorkPhone>1111111111</WorkPhone>\n"+
+                "                        <MiddleName>string</MiddleName>\n"+
+                "                        <EmergencyContactInfoName>string</EmergencyContactInfoName>\n"+
+                "                        <EmergencyContactInfoRelationship>string</EmergencyContactInfoRelationship>\n"+
+                "                        <EmergencyContactInfoPhone>string</EmergencyContactInfoPhone>\n"+
+                "                        <EmergencyContactInfoEmail>string</EmergencyContactInfoEmail>\n"+
                 "                    </Client>\n" +
                 "                </Clients>\n" +
                 "            </Request>\n" +
